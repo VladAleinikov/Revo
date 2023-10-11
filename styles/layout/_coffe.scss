@@ -20,17 +20,30 @@
       }
       .coffe__slider {
             position: relative;
+            height: 544px;
+            width: 200%;
             left: 0;
             @include flex(column, $gap: 32px);
+            overflow: hidden;
 
-            ul {
+            .slider__top{
+                  top: 0;
+            }
+            .slider__bottom{
+                  bottom: 0;
+            }
+            .coffe__slides {
+                  position: absolute;
+                  left: 0;
                   @include flex($gap: 30px);
+                  transition: .5s;
             }
             .slider__card {
                   @include flex();
                   width: 560px;
                   height: 256px;
                   background-color: #fff;
+                  transition: .5s;
 
                   img {
                         object-fit: cover;
@@ -64,6 +77,9 @@
                   }
                   &.half-hide{
                         opacity: .5;
+                  }
+                  &.hide{
+                        opacity: 0;
                   }
             }
       }
