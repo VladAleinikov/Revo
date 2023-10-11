@@ -17,6 +17,7 @@ html {
 
 body {
   position: relative;
+  background: #F9FBFF;
 }
 body.modal-active {
   height: 100vh;
@@ -87,7 +88,7 @@ h4, .price {
 }
 
 header {
-  background: linear-gradient(90deg, #f9f5e8 0%, #f9f5e8 50%, #415167 50%, #415167 100%);
+  background: linear-gradient(90deg, #F9FBFF 0%, #F9FBFF 50%, #415167 50%, #415167 100%);
 }
 
 .header-container {
@@ -236,4 +237,54 @@ header {
 }
 .header-container .header-right .header-right__nav .nav__list .nav__item:hover {
   color: #c7a17a;
+}
+
+.features-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: unset;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 87px;
+  margin-bottom: 130px;
+}
+.features-container h4 {
+  margin-bottom: 8px;
+}
+.features-container h2 {
+  margin-bottom: 115px;
+}
+.features-container .features__list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: unset;
+}
+.features-container .features__list .features__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: unset;
+  width: 225px;
+  height: 250px;
+}
+.features-container .features__list .features__item img {
+  width: 80px;
+  height: 80px;
+  margin-top: 17px;
+  margin-bottom: 40px;
+}
+.features-container .features__list .features__item h3 {
+  color: #232C38;
+  margin-bottom: 12px;
+}
+.features-container .features__list .features__item p {
+  color: #151D28;
+  text-align: center;
+  font-style: normal;
 }/*# sourceMappingURL=main.css.map */

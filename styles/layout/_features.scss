@@ -1,0 +1,41 @@
+.features-container{
+      @include flex(column);
+      max-width: 1000px;
+      margin: auto;
+      margin-top: 87px;
+      margin-bottom: 130px;
+
+      h4{
+            margin-bottom: 8px;
+      }
+      h2{
+            margin-bottom: 115px;
+      }
+      .features__list{
+            width: 100%;
+            @include flex($just: space-between);
+
+            .features__item{
+                  @include flex(column);
+                  width: 225px;
+                  height: 250px;
+
+                  img{
+                        width: 80px;
+                        height: 80px;
+                        margin-top: 17px;
+                        margin-bottom: 40px;
+                  }
+                  h3{
+                        color: #232C38;
+                        margin-bottom: 12px;
+                  }
+                  p{
+                        color: #151D28;
+                        text-align: center;
+                        font-style: normal;
+                  }
+            }
+
+      }
+}

@@ -1,5 +1,5 @@
 header {
-      background: linear-gradient(90deg, $accent-2 0%, $accent-2 50%, $primary 50%, $primary 100%);
+      background: linear-gradient(90deg, #F9FBFF 0%, #F9FBFF 50%, $primary 50%, $primary 100%);
 }
 .header-container {
       @include flex($align: start);
