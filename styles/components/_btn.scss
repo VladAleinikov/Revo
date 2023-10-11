@@ -9,4 +9,19 @@
       padding: 6px 17px 8px 17px;
       background: $accent-1;
       border-radius: 17px;
+      transition: 0.5s;
+
+      &.btn-light {
+            color: #415167;
+            background: transparent;
+            padding: 6px 11px 8px 11px;
+
+            &:hover {
+                  background: $accent-1;
+                  color: $accent-2;
+            }
+      }
+      &:hover {
+            background: #a8815a;
+      }
 }
