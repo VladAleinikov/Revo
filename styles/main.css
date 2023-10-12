@@ -472,6 +472,7 @@ header {
   height: 100%;
   top: -100%;
   right: 0;
+  transition: 0.5s;
 }
 .giftset-container .giftset__gifts .gifts__gift.active {
   top: 0%;

@@ -34,3 +34,15 @@ coffeRight.addEventListener("click", e => {
                   card.classList.add("hide");
       })
 })
+
+// Giftset
+const giftsetControls = [...document.getElementsByClassName("giftset__control")];
+const gifts = [...document.getElementsByClassName("gifts__gift")];
+
+giftsetControls.map((btn, id) => btn.addEventListener("click", e => {
+      giftsetControls.map(el => el.classList.remove("active"));
+      e.target.classList.add("active");
+
+      gifts.map(el => el.classList.remove("active"));
+      gifts[id].classList.add("active");
+}))
