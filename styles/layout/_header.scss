@@ -118,7 +118,7 @@ header {
                         @include flex(column, space-between, start);
                         height: 225px;
 
-                        .nav__item{
+                        .nav__item a{
                               cursor: pointer;
                               display: flex;
                               color: $light;

@@ -244,7 +244,7 @@ header {
   gap: unset;
   height: 225px;
 }
-.header-container .header-right .header-right__nav .nav__list .nav__item {
+.header-container .header-right .header-right__nav .nav__list .nav__item a {
   cursor: pointer;
   display: flex;
   color: #edf0f5;
@@ -252,7 +252,7 @@ header {
   line-height: 24px;
   transition: 0.5s;
 }
-.header-container .header-right .header-right__nav .nav__list .nav__item:hover {
+.header-container .header-right .header-right__nav .nav__list .nav__item a:hover {
   color: #c7a17a;
 }
 
