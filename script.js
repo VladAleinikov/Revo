@@ -15,22 +15,22 @@ video.addEventListener("click", e => {
 
 // Slider coffe
 const coffeSlider = [...document.getElementsByClassName("coffe__slides")];
-const sliderCard = [...document.getElementsByClassName("slider__card")];
+const coffeSliderCard = [...document.querySelectorAll(".coffe__slider .slider__card")];
 const coffeRight = document.getElementById("coffe__slide-right");
 let coffeSlide = 0;
 
 coffeRight.addEventListener("click", e => {
       const show = document.documentElement.clientWidth > 768 ? 2 : 1;
       coffeSlide += 1;
-      if (coffeSlide == (sliderCard.length / 2) - 1)
+      if (coffeSlide == (coffeSliderCard.length / 2) - 1)
             coffeSlide = 0;
       coffeSlider[0].style.left = coffeSlide * -590 + "px";
       coffeSlider[1].style.left = coffeSlide * -590 + "px";
-      sliderCard.map((card, id) => {
+      coffeSliderCard.map((card, id) => {
             card.classList.remove("hide", "half-hide");
-            if (id == coffeSlide + show || id == coffeSlide + show + sliderCard.length / 2)
+            if (id == coffeSlide + show || id == coffeSlide + show + coffeSliderCard.length / 2)
                   card.classList.add("half-hide");
-            if (id > coffeSlide + show && id < sliderCard.length / 2 || id > coffeSlide + show + sliderCard.length / 2 && id < sliderCard.length)
+            if (id > coffeSlide + show && id < coffeSliderCard.length / 2 || id > coffeSlide + show + coffeSliderCard.length / 2 && id < coffeSliderCard.length)
                   card.classList.add("hide");
       })
 })
@@ -46,3 +46,29 @@ giftsetControls.map((btn, id) => btn.addEventListener("click", e => {
       gifts.map(el => el.classList.remove("active"));
       gifts[id].classList.add("active");
 }))
+
+// Combo slider
+const comboSlider = [...document.getElementsByClassName("combo__slides")];
+const comboSliderCard = [...document.querySelectorAll(".combo__slides .slider__card")];
+const comboRight = document.getElementById("combo__slide-right");
+let comboSlide = 0;
+
+comboRight.addEventListener("click", e => {
+      const show = document.documentElement.clientWidth > 1024 ? 3 : document.documentElement.clientWidth > 768 ? 2 : 1;
+      comboSlide += 1;
+      if (comboSlide == (comboSliderCard.length) - show + 1)
+            comboSlide = 0;
+      comboSlider[0].style.left = comboSlide * -390 + "px";
+      showCombo(comboSlide);
+})
+const showCombo = (slide) => {
+      const show = document.documentElement.clientWidth > 1024 ? 3 : document.documentElement.clientWidth > 768 ? 2 : 1;
+      comboSliderCard.map((card, id) => {
+            card.classList.remove("hide", "half-hide");
+            if (id == slide + show)
+                  card.classList.add("half-hide");
+            if (id > slide + show && id < comboSliderCard.length / 2)
+                  card.classList.add("hide");
+      })
+}
+showCombo(0);
