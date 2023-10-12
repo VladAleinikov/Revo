@@ -1,0 +1,92 @@
+.combo {
+      background: linear-gradient(90deg, #f9fbff 0%, #f9fbff 50%, $primary 50%, $primary 100%);
+      overflow: hidden;
+}
+.combo-container {
+      position: relative;
+      background: linear-gradient(90deg, #f9fbff 0%, #f9fbff 75%, $primary 75%, $primary 100%);
+      padding: 88px 0 130px 130px;
+      @include flex(column, $align: start);
+
+      h4 {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 6px;
+      }
+      h2 {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 64px;
+      }
+      .combo__slider {
+            position: relative;
+            height: 562px;
+            width: 200%;
+            left: 0;
+            @include flex($gap: 30px);
+            overflow: hidden;
+
+            .combo__slides {
+                  position: absolute;
+                  left: 0;
+                  @include flex($gap: 30px);
+                  transition: 0.5s;
+
+                  .slider__card {
+                        width: 360px;
+                        height: 562px;
+                        @include flex(column);
+                        background: #fff;
+                        transition: 0.5s;
+
+                        &:hover {
+                              box-shadow: 0px 4px 24px 0px rgba(205, 205, 205, 0.5);
+                        }
+                        img {
+                              width: 360px;
+                              height: 300px;
+                              object-fit: cover;
+                        }
+                        .card__content {
+                              padding: 42px;
+                              @include flex($just: space-between, $gap: 10px);
+                              flex-wrap: wrap;
+
+                              .price-crossed {
+                                    text-decoration: line-through;
+                                    margin-right: 125px;
+                              }
+                              .btn {
+                                    margin-top: 22px;
+                              }
+                        }
+                        &.half-hide {
+                              opacity: 0.5;
+                        }
+                        &.hide {
+                              opacity: 0;
+                        }
+                  }
+            }
+      }
+      .combo__slide-right {
+            cursor: pointer;
+            @include flex();
+            position: absolute;
+            right: 66px;
+            bottom: 375px;
+            width: 48px;
+            height: 48px;
+            background: $accent-1;
+            border-radius: 100%;
+            transition: .5s;
+            
+            img {
+                  width: 24px;
+                  height: 17px;
+            }
+            &:hover{
+                  background: #a8815a;
+            }
+      }
+}
