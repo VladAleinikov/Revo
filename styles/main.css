@@ -676,4 +676,13 @@ header {
 }
 .combo-container .combo__slide-right:hover {
   background: #a8815a;
+}
+
+.footer {
+  padding: 20px 0;
+  background: #EDF0F5;
+}
+.footer p {
+  width: 100%;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
